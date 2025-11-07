@@ -1,0 +1,56 @@
+import './App.css'
+//import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/visitor/Home'
+import { Suspense } from 'react'
+
+import { Canvas } from '@react-three/fiber'
+import { Environment, OrbitControls, ContactShadows, Text3D } from '@react-three/drei'
+import { Earth } from '../public/Earth'
+
+function App() {
+
+  return (
+    <>
+      {/* Texto encima 
+      <h1 className="overlay-title">MONE</h1>
+*/}
+
+      <Canvas camera={{ position: [20, 0, 6], fov: 30 }}>
+        <Suspense fallback={null}>
+          <ambientLight intensity={-0.2} />
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2.2}
+            minPolarAngle={Math.PI / 2.2}
+
+          />
+          <Earth />
+          <Text3D
+            font="/fonts/popins.json"
+            size={2}
+            height={0.2}         // profundidad
+            curveSegments={12}
+            bevelEnabled
+            bevelThickness={0.03}
+            bevelSize={0.02}
+            bevelOffset={0}
+            bevelSegments={5}
+            position={[2, 0, 4.5]}
+            rotation={[0, Math.PI / 2.3, 0]}
+             
+          >
+            MONE
+            <meshStandardMaterial color="#585233" metalness={0.1} roughness={0.5} />
+          </Text3D>
+        </Suspense>
+        <Environment preset="sunset" />
+        <ContactShadows position={[0, -3, 0]} opacity={0.6} scale={10} blur={2.5} far={4} />
+
+      </Canvas>
+
+
+    </>
+  )
+}
+
+export default App

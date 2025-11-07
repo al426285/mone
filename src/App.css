@@ -1,42 +1,287 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+canvas {
+    height: 100vh !important;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+    background-color: #CCD5B9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h1 {
+    color: #585233;
+    background-color: transparent;
+    font-size: 11rem;
+    text-shadow: 0 0 5px #f3e28c
 }
 
-.card {
-  padding: 2em;
+.titulo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    z-index: 10;
 }
 
-.read-the-docs {
-  color: #888;
+@media screen and (max-width: 550px) {
+    .textomone {
+        font-size: 8rem;
+    }
+
+    canvas {
+        transform: scale(1);
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .textomone {
+        font-size: 7rem;
+    }
+
+    .textoeslogan {
+        font-size: 18px;
+
+
+    }
+
+}
+
+
+
+.home_principal {
+    max-height: 100vh;
+}
+
+.eslogan {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* asi mantiene el centrado */
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    z-index: 10;
+    color: #585233;
+    background-color: transparent;
+    text-shadow: 0 0 5px #f3e28c;
+}
+
+.aboutus {
+    padding-top: 2rem;
+    text-align: center;
+    justify-content: center;
+    /*horizontal*/
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #585233;
+}
+
+.englobado {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*vertical*/
+    gap: 50px;
+
+}
+
+@media screen and (max-width: 900px) {
+    .imagengrupo img {
+        transform: scale(1.3);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .imagengrupo img {
+        transform: scale(1.4);
+    }
+
+    .textonosotros {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .enunciado {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    .englobado {
+        flex-direction: column;
+    }
+
+    .textonosotros {
+        font-size: 0.85rem;
+    }
+
+    .imagengrupo img {
+        transform: scale(1.6);
+    }
+}
+
+
+@media screen and (max-width: 470px) {
+
+    .textonosotros {
+        font-size: 0.7rem;
+    }
+
+    .imagengrupo img {
+        transform: scale(1.8);
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .textonosotros {
+        font-size: 0.6rem;
+    }
+
+    .imagengrupo img {
+        transform: scale(1.8);
+    }
+}
+
+.enunciado {
+    color: #CCD5B9;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 80px #E0E6D5;
+}
+
+#services {
+    max-width: 100vw;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-height: 100vh;
+}
+
+#gruposervicios {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.titulo_servicios {
+    text-align: center;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    color: #585233;
+    text-shadow: 10px 10px 60px #585233;
+}
+
+.cards_servicios {
+    text-align: center;
+    width: 60%;
+    height: 100%;
+}
+
+.cards_servicios p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cards_servicios h3 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ddb187;
+    /*cambiar color*/
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+
+    @media screen and (max-width: 900px) {
+
+        #gruposervicios {
+            flex-direction: column;
+        }
+
+        .titulo_servicios {
+            text-align: right;
+            width: 100%;
+            height: 20%;
+            color: #585233;
+            text-shadow: 10px 10px 60px #585233;
+            background-color: red;
+        }
+        .titulo_servicios h2{
+            background-color: green;
+            font-size: 62px;
+        }
+
+        .cards_servicios {
+            text-align: right;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            height: 70%;
+            transform: scale(1.1);
+            margin-right: 0px;
+        }
+
+        #gruposervicios {
+            height: 100vh;
+        }
+
+      
+
+    }
+
+}
+
+#contact {
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+    background-color: #585233;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+.contact_principal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contact_box {
+    /* cajita que contiene el menu */
+    border-radius: 20px;
+    padding: 40px;
+    width: 500px;
+    max-width: 80vw;
+
 }

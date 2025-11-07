@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="3" failures="3" errors="0" time="0.6744813">
+    <testsuite name="utils/prueba.aceptacion.test.js" timestamp="2025-10-31T15:55:50.826Z" hostname="LAPTOP-Q0V7M1DN" tests="3" failures="3" errors="0" skipped="0" time="0.6744813">
+        <testcase classname="utils/prueba.aceptacion.test.js" name="Pruebas de aceptación del registro &gt; debería registrar un nuevo usuario en Firebase" time="0.0072873">
+            <failure message="(0 , __vite_ssr_import_0__.signUp) is not a function" type="TypeError">
+TypeError: (0 , __vite_ssr_import_0__.signUp) is not a function
+ ❯ utils/prueba.aceptacion.test.js:8:32
+            </failure>
+        </testcase>
+        <testcase classname="utils/prueba.aceptacion.test.js" name="Pruebas de aceptación del registro &gt; debería permitir iniciar sesión con Google" time="0.0021969">
+            <failure message="(0 , __vite_ssr_import_0__.googleSignIn) is not a function" type="TypeError">
+TypeError: (0 , __vite_ssr_import_0__.googleSignIn) is not a function
+ ❯ utils/prueba.aceptacion.test.js:13:38
+            </failure>
+        </testcase>
+        <testcase classname="utils/prueba.aceptacion.test.js" name="Pruebas de aceptación del registro &gt; debería agregar un usuario a Firestore" time="0.6598577">
+            <system-out>
+Usuario agregado
+
+            </system-out>
+            <failure message="expected undefined to be true // Object.is equality" type="AssertionError">
+AssertionError: expected undefined to be true // Object.is equality
+
+- Expected: 
+true
+
++ Received: 
+undefined
+
+ ❯ utils/prueba.aceptacion.test.js:19:20
+            </failure>
+        </testcase>
+    </testsuite>
+</testsuites>
